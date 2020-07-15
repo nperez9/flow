@@ -1,0 +1,6 @@
+function errorMiddleware(err, req, res, next) {
+  console.error(err.stack);
+  return res.status(500).json({'Message': 'sever error'});
+}
+
+module.exports = errorMiddleware;
